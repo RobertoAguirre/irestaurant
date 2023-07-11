@@ -1,6 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 import { AlertController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-order-selection',
@@ -12,7 +15,7 @@ export class OrderSelectionPage implements OnInit {
   isSupported = false;
   barcodes: Barcode[] = [];
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController) {}
 
   ngOnInit() {
     BarcodeScanner.isSupported().then((result) => {
