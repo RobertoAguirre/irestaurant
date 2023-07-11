@@ -8,8 +8,28 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'order-selection',
     pathMatch: 'full'
+  },
+  {
+    path: 'order-selection',
+    loadChildren: () => import('./order-selection/order-selection.module').then( m => m.OrderSelectionPageModule)
+  },
+  {
+    path: 'item-information',
+    loadChildren: () => import('./item-information/item-information.module').then( m => m.ItemInformationPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'main-screen',
+    loadChildren: () => import('./main-screen/main-screen.module').then( m => m.MainScreenPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
 ];
 
