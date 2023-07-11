@@ -12,6 +12,7 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  //
   form: any;
   submitting: boolean = false;
 
