@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'order-selection',
-    loadChildren: () => import('./order-selection/order-selection.module').then( m => m.OrderSelectionPageModule)
-  },
-  {
     path: 'item-information',
     loadChildren: () => import('./item-information/item-information.module').then( m => m.ItemInformationPageModule)
   },
@@ -30,6 +26,10 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'order-selection',
+    loadChildren: () => import('./order-selection/order-selection.module').then( m => m.OrderSelectionPageModule)
   },
 ];
 
